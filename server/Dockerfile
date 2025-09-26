@@ -1,5 +1,8 @@
 # Use an official lightweight Node.js image
-FROM node:20-alpine
+FROM node:20-alpine3.22
+
+# Update system packages to get the latest security patches
+RUN apk update && apk upgrade
 
 # Set the working directory inside the container
 WORKDIR /app
