@@ -1,0 +1,11 @@
+# Dependency directories
+/node_modules
+
+# Build directories
+/dist
+/build
+.next
+
+# Configuration and lock files you don't want formatted
+package-lock.json
+yarn.lock
