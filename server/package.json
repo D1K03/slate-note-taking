@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "nodemon --exec npx tsx src/index.ts",
     "build": "tsc",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,12 +21,22 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "prisma": "^6.16.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@eslint/json": "^0.13.2",
+    "@types/argon2": "^0.14.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.0",
     "nodemon": "^3.1.10",
-    "tsx": "^4.20.6"
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript-eslint": "^8.44.1"
   }
 }
