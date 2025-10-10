@@ -30,6 +30,7 @@ dist-ssr
 /client/.vite
 # Dependencies
 /client/node_modules
+/src/generated/prisma
 
 # TypeScript compilation output
 /server/dist
