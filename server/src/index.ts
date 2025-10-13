@@ -1,13 +1,14 @@
 import express from 'express'
+import authRouter from './routes/auth.js'
+import 'dotenv/config'
 
 const app = express()
-const port = 5000
+const port = process.env.PORT
 
-// Apply middleware ONCE here
 app.use(express.json())
 
-// Tell the app to use your auth routes for any request to /api/auth
+app.use('/auth', authRouter)
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
+    console.log(`Port on ${port}`)
 })
