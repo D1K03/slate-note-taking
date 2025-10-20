@@ -1,4 +1,4 @@
 * text=auto
-*.js    text auto
-*.json  text auto
-*.ts    text auto
+*.bat text eol=crlf
+*.cmd text eol=crlf
+* text eol=lf
