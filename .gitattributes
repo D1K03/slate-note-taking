@@ -1,1 +1,4 @@
 * text=auto
+*.js    text auto
+*.json  text auto
+*.ts    text auto
