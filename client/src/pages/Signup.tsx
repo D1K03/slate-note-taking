@@ -1,12 +1,10 @@
-import { useState } from 'react';
-import './SignUp.module.css'
+import { useState } from 'react'
 
-function SignupPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+function Signup() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => e.preventDefault()
-    
 
     return (
         <main>
@@ -15,27 +13,27 @@ function SignupPage() {
                 <div>
                     <div>
                         <input
-                            type="email"
-                            id="email"
+                            type='email'
+                            id='email'
                             value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
-                            />
+                        />
                     </div>
                     <div>
                         <input
-                            type="password"
-                            id="password"
+                            type='password'
+                            id='password'
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                     </div>
                 </div>
-                <button type="submit">Sign Up</button>
+                <button type='submit'>Sign Up</button>
             </form>
         </main>
-    );
+    )
 }
 
-export default SignupPage
+export default Signup
