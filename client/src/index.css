@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        @apply text-2xl;
-    }
+  html {
+    @apply text-2xl;
+  }
 
-    body {
-        @apply text-slate-800 font-mono;
-    }
+  body {
+    @apply text-slate-800 font-mono;
+  }
 
-    main {
-        @apply bg-slate-300
-    }
+  main {
+    @apply bg-slate-300;
+  }
 
-    h1 {
-        @apply text-3xl;
-    }
+  h1 {
+    @apply text-3xl;
+  }
 
-    h2 {
-        @apply text-2xl
-    }
+  h2 {
+    @apply text-2xl;
+  }
 }
