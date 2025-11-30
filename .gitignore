@@ -36,6 +36,7 @@ dist-ssr
 /server/dist
 # Dependencies
 /server/node_modules
+/shared/node_modules
 
 # macOS
 .DS_Store

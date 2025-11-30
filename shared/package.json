@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "prettier": "^3.7.3",
+    "zod": "^4.1.13"
+  }
+}

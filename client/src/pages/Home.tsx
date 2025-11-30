@@ -1,12 +1,12 @@
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
 
 function Home() {
   return (
-    <main className='min-h-screen'>
+    <main className="min-h-screen">
       <Navbar />
       <section></section>
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;
