@@ -25,6 +25,9 @@ dist-ssr
 *.sln
 *.sw?
 
+# Root Dependencies
+/node_modules
+
 # Vite/React build output
 /client/dist
 /client/.vite
