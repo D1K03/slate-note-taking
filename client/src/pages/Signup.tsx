@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 function Signup() {
@@ -6,51 +7,79 @@ function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Handle signup logic here
+  };
 
   return (
-    <main className="min-h-screen flex flex-col items-center">
+    <main className="min-h-screen bg-slate-300">
       <Navbar />
-      <section className="flex flex-col gap-8 items-center justify-center p-8 rounded-md shadow-lg w-fit mt-auto mb-auto">
-        <h2>Sign Up</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-8">
-          <div className="flex flex-col gap-4">
-            <div>
+      <section className="flex items-center justify-center min-h-[calc(100vh-4rem)] px-4">
+        <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+          <h2 className="text-3xl font-bold text-slate-800 mb-2 text-center">Create Account</h2>
+          <p className="text-slate-600 text-base mb-8 text-center">
+            Join Slate and start taking notes
+          </p>
+
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-slate-700 font-semibold text-base">
+                Full Name
+              </label>
               <input
                 type="text"
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Full Name"
                 required
-                className="rounded-sm bg-transparent outline-none"
+                className="px-4 py-3 border-2 border-slate-300 rounded-md focus:border-slate-600 focus:outline-none transition-colors text-base bg-slate-50"
               />
             </div>
-            <div>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="email" className="text-slate-700 font-semibold text-base">
+                Email
+              </label>
               <input
                 type="email"
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
                 required
-                className="rounded-sm bg-transparent outline-none"
+                className="px-4 py-3 border-2 border-slate-300 rounded-md focus:border-slate-600 focus:outline-none transition-colors text-base bg-slate-50"
               />
             </div>
-            <div>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="password" className="text-slate-700 font-semibold text-base">
+                Password
+              </label>
               <input
                 type="password"
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
                 required
-                className="rounded-sm bg-transparent outline-none"
+                className="px-4 py-3 border-2 border-slate-300 rounded-md focus:border-slate-600 focus:outline-none transition-colors text-base bg-slate-50"
               />
             </div>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
+
+            <button
+              type="submit"
+              className="w-full bg-slate-800 text-white py-3 rounded-md hover:bg-slate-700 transition-colors font-semibold text-base mt-2"
+            >
+              Sign Up
+            </button>
+          </form>
+
+          <p className="text-slate-600 text-center mt-6 text-base">
+            Already have an account?{' '}
+            <Link to="/login" className="text-slate-800 font-semibold hover:underline">
+              Login
+            </Link>
+          </p>
+        </div>
       </section>
     </main>
   );

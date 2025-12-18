@@ -1,12 +1,10 @@
 {
+  "name": "@slate/shared",
   "scripts": {
     "format:check": "prettier --check .",
     "format:fix": "prettier --write ."
   },
   "dependencies": {
     "zod": "^4.1.13"
-  },
-  "devDependencies": {
-    "prettier": "3.7.3"
   }
 }
