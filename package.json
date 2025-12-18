@@ -1,0 +1,32 @@
+{
+  "name": "slate-note-taking",
+  "version": "1.0.0",
+  "description": "Web application where users can sign up, create notes using Markdown syntax for formatting, and attach a single file (like an image or PDF) to each note.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D1K03/slate-note-taking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "bugs": {
+    "url": "https://github.com/D1K03/slate-note-taking/issues"
+  },
+  "homepage": "https://github.com/D1K03/slate-note-taking#readme",
+  "devDependencies": {
+    "prettier": "^3.7.4"
+  }
+}
